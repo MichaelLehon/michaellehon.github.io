@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - main  # adjust as necessary for your default branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'  # using the LTS version
+        node-version: '18'
 
     - name: Install Dependencies
       run: |
@@ -28,11 +28,12 @@ jobs:
 
     - name: Move Output
       run: |
-        cp -r ./dist/michaellehon.github.io/browser/* .
+        mkdir -p ./docs
+        cp -r ./dist/michaellehon.github.io/browser/* ./docs/
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs
-        keep_files: true  # Use this if you want to keep files already in gh-pages branch
+        keep_files: false
