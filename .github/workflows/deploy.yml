@@ -1,0 +1,38 @@
+name: Deploy Angular App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # adjust as necessary for your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'  # using the LTS version
+
+    - name: Install Dependencies
+      run: |
+        npm install
+        npm install -g @angular/cli
+
+    - name: Build Project
+      run: ng build --configuration production --base-href "/"
+
+    - name: Move Output
+      run: |
+        cp -r ./dist/michaellehon.github.io/browser/* .
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        keep_files: true  # Use this if you want to keep files already in gh-pages branch
