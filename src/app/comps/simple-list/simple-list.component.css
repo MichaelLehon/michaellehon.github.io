@@ -1,0 +1,30 @@
+
+.basic_list{
+    list-style-type: none;
+    margin: 5px;
+    padding: 0px 0px 0px 0px;
+}
+
+.basic_list p {
+    all: unset;
+    display: inline;
+    font-size: 18px;
+    color: #8dd8da;
+    justify-content: right;
+}
+
+.basic_list_text ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.basic_list_text p {
+    color: #b7dedf;
+}
+
+.text_container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 7px;
+}

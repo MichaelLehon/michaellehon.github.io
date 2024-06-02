@@ -1,0 +1,12 @@
+<ul class="basic_list">
+    <li *ngFor="let item of list">
+        <div class="text_container">
+            <p style="width: 90px;">{{item.header}}</p>
+            <ul class="basic_list_text">
+                <li *ngFor="let text of item.text">
+                    <p>{{text}}</p>
+                </li>
+            </ul>
+        </div>
+    </li>
+</ul>

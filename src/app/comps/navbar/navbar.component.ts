@@ -37,7 +37,7 @@ export class NavbarComponent {
 			external: true,
 			text: "Github",
 			icon: "nav/github.png",
-			link: "https://www.linkedin.com/in/michael-lehon-1390431b5/",
+			link: "https://github.com/MichaelLehon",
 			click: this.setPage.bind(this, ""),
 		}
 	]

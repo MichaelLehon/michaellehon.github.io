@@ -1,0 +1,64 @@
+@import url('../simple-list//simple-list.component.css');
+
+.showcase_column {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px 0px 20px;
+}
+
+.showcase_row {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 0px 0px;
+    width: 100%;
+}
+
+.showcase {
+    border: 3px solid #111718;
+    border-radius: 10px;
+    background: #232e30;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 20px 0px;
+    font-family: Calibri, Tahoma, Arial;
+}
+
+.showcase h1{
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #8dd8da;
+    font-size: 30px;
+    border-bottom: 3px solid #111718;
+    width: 100%;
+}
+
+.basic_list{
+    list-style-type: none;
+    margin: 5px;
+    padding: 0px 0px 0px 0px;
+}
+
+.basic_list p {
+    all: unset;
+    display: inline;
+    font-size: 18px;
+    color: #8dd8da;
+    justify-content: right;
+    margin-bottom: 7px;
+}
+
+.basic_list_text ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.basic_list_text p {
+    color: #b7dedf;
+}
+
+.item_container {
+    display: flex;
+    align-items: flex-start;
+}
