@@ -1,0 +1,20 @@
+<div id="navbar">
+    <ul>
+        <li *ngFor="let item of list">
+            <!-- Internal -->
+            <div *ngIf="!item.external" (click)="item.click()">
+                <div class="navbar_entry" title={{item.text}}>
+                    <img [src]="'icon/' + item.icon" [alt]=item.text>
+                </div>
+            </div>
+            <!-- External -->
+            <a *ngIf="item.external" href={{item.link}} target="_blank">
+                <div class="navbar_entry" title={{item.text}}>
+                    <img [src]="'icon/' + item.icon" [alt]=item.text>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div id="bottom_spacer"></div>
