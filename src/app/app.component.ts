@@ -14,11 +14,11 @@ import { NavbarComponent } from "./comps/navbar/navbar.component";
     imports: [CommonModule, RouterOutlet, ResumePageComponent, NavbarComponent, HomePageComponent]
 })
 export class AppComponent {
-  title = 'michaellehon.github.io';
-
-  selectedPage: string = "home";
+	title = 'michaellehon.github.io';	
+	selectedPage: string = "resume";
 
 	onPageSelected(page: string) {
-		this.selectedPage = page;
+		//this.selectedPage = page;
+    	this.selectedPage = "resume";
 	}
 }

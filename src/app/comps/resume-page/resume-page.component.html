@@ -1,3 +1,61 @@
-<div id="placeholder"></div>
 
-<p>Resume Page</p>
+<div class="showcase_column">
+
+    <div class="showcase_row" style="flex: 1">
+
+        <div class="showcase" *ngFor="let item of basic_showcases">
+            <h1 class="showcase_title">{{item.title}}</h1>
+            <app-simple-list [list]="item.list"></app-simple-list>
+        </div>
+    
+    </div>
+
+    <div class="showcase_row" style="flex: 2">
+
+        <div class="showcase">
+            <h1 class="showcase_title">Hobby Experience</h1>
+            <ul class="basic_list" style="padding: 10px">
+                <li *ngFor="let item of hobby_experience" style="margin-right: 10px">
+                    <div class="sub_showcase">
+                        <h1>{{item.title}}</h1>
+                        <p>{{item.information}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="showcase">
+            <h1 class="showcase_title">Professional Experience</h1>
+            <ul class="basic_list" style="padding: 10px">
+                <li *ngFor="let item of professional_experience" style="margin-right: 10px">
+                    <div class="sub_showcase">
+                        <h1>{{item.company}}</h1>
+                        <h2>{{item.duration}}</h2>
+                        <h3>{{item.position}}</h3>
+                        <p>{{item.description}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="showcase">
+            <h1 class="showcase_title">References</h1>
+            <ul class="basic_list" style="padding: 10px" style="margin-right: 10px">
+                <li *ngFor="let item of references">
+                    <div class="sub_showcase">
+                        <h1>{{item.name}}</h1>
+                        <h2>{{item.position}}</h2>
+                        <ul class="basic_list" style="padding: 10px" style="margin-right: 10px">
+                            <li *ngFor="let contact of item.contact_info">
+                                <p>{{contact}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    
+    </div>
+
+</div>
