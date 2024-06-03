@@ -124,17 +124,17 @@ export class ResumePageComponent {
 
 	professional_experience = [
 		{
+			company:"BMW",
+			duration:"May 2024 - August 2024",
+			position: "Innovation and Research Intern",
+			description:"During my internship at BMW, I had the opportunity to work closely with a talented team on a cutting-edge AI projects. The focus was on developing and implementing solutions to complex problems that existing LLM's struggle with. I gained valuable hands-on experience in AI development, working with both front-end and back-end systems, and contributing to innovative projects that are shaping the future of the industry.",
+		},
+		{
 			company:"Chick-fil-A",
 			duration:"July 2019 - Feb 2024",
 			position: "Front Of House",
 			description:"Dedicated team member with comprehensive experience working in multiple front-of-house positions. Proficient in delivering exceptional customer service with a helpful and enthusiastic attitude. Proven ability to work efficiently with others even in stressful situations.",
 		},
-		{
-			company:"BMW",
-			duration:"May 2024 - August 2024",
-			position: "Innovation and Research Intern",
-			description:"During my internship at BMW, I had the opportunity to work closely with a talented team on a cutting-edge AI projects. The focus was on developing and implementing solutions to complex problems that existing LLM's struggle with. I gained valuable hands-on experience in AI development, working with both front-end and back-end systems, and contributing to innovative projects that are shaping the future of the industry.",
-		}
 	]
 
 	references = [
